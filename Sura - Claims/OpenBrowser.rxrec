@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="d2e4c9c5-a4b2-4f60-a158-a09b3f32ecd2"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="OpenBrowser"
+	namespace="Sura___Claims">
+	</codegen>
+	<variables>
+		<var
+		id="5500acff-0096-4841-a0f6-13365d576c4c"
+		name="URL">
+			https://i-preproducciongestion.segurossura.com.ar/cc/ClaimCenter.do
+		</var>
+	</variables>
+	<recorditems>
+		<openwebsiterecorditem
+		args=""
+		browser="Chrome"
+		clearcache="False"
+		clearcookies="False"
+		enabled="True"
+		incognito="True"
+		instrument="True"
+		killexisting="False"
+		maximized="True"
+		optional="False">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="Url"
+				variable="URL">
+				</binding>
+			</bindings>
+			<url>
+				https://ssurgwsoadev4.opc.oracleoutsourcing.com/cc/ClaimCenter.do
+			</url>
+		</openwebsiterecorditem>
+	</recorditems>
+	<repository
+	id="89de42cf-da5b-44d4-a541-72de9b37ec4c"
+	name="Sura___ClaimsRepository"
+	relativepath="Sura___ClaimsRepository.rxrep">
+		<codegen
+		classname="Sura___ClaimsRepository"
+		namespace="Sura___Claims">
+		</codegen>
+		<rootfolder
+		id="e236aa5f-717e-474a-818d-ab73ab951257"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		OpenBrowser.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

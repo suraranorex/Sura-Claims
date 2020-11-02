@@ -1,0 +1,980 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{76ED43CB-78D0-4527-99E7-FED6470610D4}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Sura___Claims</RootNamespace>
+    <AssemblyName>Sura - Claims</AssemblyName>
+    <NoWarn>1591</NoWarn>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
+    <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</projectdefaultrepository>
+    <StartAction>Project</StartAction>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarDanosLesionesTerceros.cs">
+      <BoundTo>1ada8859-c195-4cf0-b0db-8ff20468cdb2</BoundTo>
+      <DependentUpon>AgregarDanosLesionesTerceros.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c2176659-89b8-43bb-ab39-8a51a581d9da</id>
+    </Compile>
+    <Compile Include="AgregarDanosLesionesTerceros.UserCode.cs">
+      <BoundTo>1ada8859-c195-4cf0-b0db-8ff20468cdb2</BoundTo>
+      <DependentUpon>AgregarDanosLesionesTerceros.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>bfcb5392-4c96-4d22-bef1-2c10f3faad70</id>
+    </Compile>
+    <Compile Include="AgregarDatosLesionesTercerosUBER.cs">
+      <BoundTo>2dabbec9-5cc9-4232-af2d-175402ee1951</BoundTo>
+      <DependentUpon>AgregarDatosLesionesTercerosUBER.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6b48948c-ee1c-4604-9234-91dff642987a</id>
+    </Compile>
+    <Compile Include="AgregarDatosLesionesTercerosUBER.UserCode.cs">
+      <BoundTo>2dabbec9-5cc9-4232-af2d-175402ee1951</BoundTo>
+      <DependentUpon>AgregarDatosLesionesTercerosUBER.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6bc8d9b5-aeab-4161-b0ad-690734947852</id>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <id>5a431573-8bf8-4bee-b0f9-ad22dc9ac89d</id>
+    </Compile>
+    <Compile Include="BuscarPoliza.cs">
+      <BoundTo>c1658188-dacd-4e8c-af80-444deca3296f</BoundTo>
+      <DependentUpon>BuscarPoliza.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>45065d9b-ee23-404a-873d-0759b9236de9</id>
+    </Compile>
+    <Compile Include="BuscarPoliza.UserCode.cs">
+      <BoundTo>c1658188-dacd-4e8c-af80-444deca3296f</BoundTo>
+      <DependentUpon>BuscarPoliza.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>dc119f63-971d-46ff-8a97-dc7ba83d96ea</id>
+    </Compile>
+    <Compile Include="Cerradura.cs">
+      <BoundTo>f7c8348e-7774-45d6-bd46-4ca09d979282</BoundTo>
+      <DependentUpon>Cerradura.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8e6f157e-280e-4aa2-ad7d-0aafd88369bf</id>
+    </Compile>
+    <Compile Include="Cerradura.UserCode.cs">
+      <BoundTo>f7c8348e-7774-45d6-bd46-4ca09d979282</BoundTo>
+      <DependentUpon>Cerradura.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>dc4d9220-c191-4210-924a-a72dae1d9efd</id>
+    </Compile>
+    <Compile Include="CloseBrowser.cs">
+      <BoundTo>1298aa89-fe5f-4c8c-9a44-26ad8f8b4d4f</BoundTo>
+      <DependentUpon>CloseBrowser.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>61ee3d39-ccff-4fd0-ace1-3edc5e808fc9</id>
+    </Compile>
+    <Compile Include="CloseBrowser.UserCode.cs">
+      <BoundTo>1298aa89-fe5f-4c8c-9a44-26ad8f8b4d4f</BoundTo>
+      <DependentUpon>CloseBrowser.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e84eea92-6c16-41ee-ac90-7389203c57b2</id>
+    </Compile>
+    <Compile Include="DatosFastTrack.cs">
+      <BoundTo>27ba3745-9e2d-4f56-802c-e5df4b9d930f</BoundTo>
+      <DependentUpon>DatosFastTrack.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>298258d3-4dfd-49ee-bf16-a5e6a726d03d</id>
+    </Compile>
+    <Compile Include="DatosFastTrack.UserCode.cs">
+      <BoundTo>27ba3745-9e2d-4f56-802c-e5df4b9d930f</BoundTo>
+      <DependentUpon>DatosFastTrack.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c979e994-591a-41af-8a3e-b55d6138ddff</id>
+    </Compile>
+    <Compile Include="DatosProveedor.cs">
+      <BoundTo>c001b303-d5a9-4845-a018-0ee828b921d7</BoundTo>
+      <DependentUpon>DatosProveedor.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b3456659-390b-4e67-8d99-b2c3548e5688</id>
+    </Compile>
+    <Compile Include="DatosProveedor.UserCode.cs">
+      <BoundTo>c001b303-d5a9-4845-a018-0ee828b921d7</BoundTo>
+      <DependentUpon>DatosProveedor.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c13fc456-93cf-4fbd-bb50-8b5194c68157</id>
+    </Compile>
+    <Compile Include="Datos_UBER_Motor.cs">
+      <BoundTo>761c6b8e-f3b1-4488-a045-ce7341a819d9</BoundTo>
+      <DependentUpon>Datos_UBER_Motor.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>336d64af-7267-43cf-aeb4-3cea37e01133</id>
+    </Compile>
+    <Compile Include="Datos_UBER_Motor.UserCode.cs">
+      <BoundTo>761c6b8e-f3b1-4488-a045-ce7341a819d9</BoundTo>
+      <DependentUpon>Datos_UBER_Motor.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b6e26aa2-87d5-4d2d-8e2d-f1b711d65c89</id>
+    </Compile>
+    <Compile Include="DescripcionDelTipoDelSiniestro.cs">
+      <BoundTo>34fbe9dd-ac5a-48c0-ab23-990c3bf07ccd</BoundTo>
+      <DependentUpon>DescripcionDelTipoDelSiniestro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>196ae649-a164-4ca7-953e-8b856cc87329</id>
+    </Compile>
+    <Compile Include="DescripcionDelTipoDelSiniestro.UserCode.cs">
+      <BoundTo>34fbe9dd-ac5a-48c0-ab23-990c3bf07ccd</BoundTo>
+      <DependentUpon>DescripcionDelTipoDelSiniestro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>0d06b17c-a87f-415f-92d9-2b0410d806d2</id>
+    </Compile>
+    <Compile Include="DescripTipoSiniestro_Tercero.cs">
+      <BoundTo>3f43b4cb-f93d-460a-9a5e-9d7e25aaa82d</BoundTo>
+      <DependentUpon>DescripTipoSiniestro_Tercero.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>33e17029-f87e-4b00-93e0-a3492277da14</id>
+    </Compile>
+    <Compile Include="DescripTipoSiniestro_Tercero.UserCode.cs">
+      <BoundTo>3f43b4cb-f93d-460a-9a5e-9d7e25aaa82d</BoundTo>
+      <DependentUpon>DescripTipoSiniestro_Tercero.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>57a9d300-62f4-47fc-a3dc-3d1c95b58bdd</id>
+    </Compile>
+    <Compile Include="DetalleVehiculoAsegurado_Tercero.cs">
+      <BoundTo>d7ffd5e6-b55b-43ec-8b07-04628ee425dd</BoundTo>
+      <DependentUpon>DetalleVehiculoAsegurado_Tercero.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>397aeca6-b4c0-4c48-bb8b-e4f157c91a41</id>
+    </Compile>
+    <Compile Include="DetalleVehiculoAsegurado_Tercero.UserCode.cs">
+      <BoundTo>d7ffd5e6-b55b-43ec-8b07-04628ee425dd</BoundTo>
+      <DependentUpon>DetalleVehiculoAsegurado_Tercero.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>eff32140-4d30-42d5-8098-cecee3eca10f</id>
+    </Compile>
+    <Compile Include="DetalleVehiculoAsegurado_Tercero_UBER.cs">
+      <BoundTo>e3d7400e-5894-4f46-b399-ca962c50fdcd</BoundTo>
+      <DependentUpon>DetalleVehiculoAsegurado_Tercero_UBER.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>592ba8f1-d101-4a96-8522-189306636c3e</id>
+    </Compile>
+    <Compile Include="DetalleVehiculoAsegurado_Tercero_UBER.UserCode.cs">
+      <BoundTo>e3d7400e-5894-4f46-b399-ca962c50fdcd</BoundTo>
+      <DependentUpon>DetalleVehiculoAsegurado_Tercero_UBER.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>ddfbf4ca-3e59-4148-9e4e-c07165b914ab</id>
+    </Compile>
+    <Compile Include="FinalizaPagoSiniestro.cs">
+      <BoundTo>afb84d64-054e-4001-9e86-728758db2aae</BoundTo>
+      <DependentUpon>FinalizaPagoSiniestro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>5fe9f282-394e-43d2-8716-28afb15a6737</id>
+    </Compile>
+    <Compile Include="FinalizaPagoSiniestro.UserCode.cs">
+      <BoundTo>afb84d64-054e-4001-9e86-728758db2aae</BoundTo>
+      <DependentUpon>FinalizaPagoSiniestro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>35125f18-7716-4f1e-8414-2772c416dd17</id>
+    </Compile>
+    <Compile Include="FinalizarSiniestroUBER.cs">
+      <BoundTo>69b853d2-d645-4968-8f1a-31bc91882377</BoundTo>
+      <DependentUpon>FinalizarSiniestroUBER.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a4b1de2f-bb7f-455c-9a54-49961bc9059e</id>
+    </Compile>
+    <Compile Include="FinalizarSiniestroUBER.UserCode.cs">
+      <BoundTo>69b853d2-d645-4968-8f1a-31bc91882377</BoundTo>
+      <DependentUpon>FinalizarSiniestroUBER.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1817dfc2-ad21-4b8e-ba23-5afc93ec9245</id>
+    </Compile>
+    <Compile Include="InformacionBasica_AP_Uber.cs">
+      <BoundTo>da35dea5-ddb5-4895-b967-af36c8af8bdc</BoundTo>
+      <DependentUpon>InformacionBasica_AP_Uber.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b5b0b76d-7da9-4bc3-a88b-1c74476d412c</id>
+    </Compile>
+    <Compile Include="InformacionBasica_AP_Uber.UserCode.cs">
+      <BoundTo>da35dea5-ddb5-4895-b967-af36c8af8bdc</BoundTo>
+      <DependentUpon>InformacionBasica_AP_Uber.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b2cdcf5d-d6cd-4f32-bd90-de9ddf9aa067</id>
+    </Compile>
+    <Compile Include="InformacionBasica_Hogar.cs">
+      <BoundTo>9bfcc045-81ae-4517-8a70-cb0d6e432a03</BoundTo>
+      <DependentUpon>InformacionBasica_Hogar.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>34fc468d-af23-4d80-825d-f5004e24714c</id>
+    </Compile>
+    <Compile Include="InformacionBasica_Hogar.UserCode.cs">
+      <BoundTo>9bfcc045-81ae-4517-8a70-cb0d6e432a03</BoundTo>
+      <DependentUpon>InformacionBasica_Hogar.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6b4b6705-941f-4090-ab7e-67e2f43359f0</id>
+    </Compile>
+    <Compile Include="InformacionBasica_Motor.cs">
+      <BoundTo>844c4a0a-32b1-4747-94d1-d5c92f9884a7</BoundTo>
+      <DependentUpon>InformacionBasica_Motor.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c3c7a681-0340-4a87-8b0d-ccb37746dc33</id>
+    </Compile>
+    <Compile Include="InformacionBasica_Motor.UserCode.cs">
+      <BoundTo>844c4a0a-32b1-4747-94d1-d5c92f9884a7</BoundTo>
+      <DependentUpon>InformacionBasica_Motor.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>185edd45-2943-44e8-a8b6-7dc46036ba9c</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_AP_Uber.cs">
+      <BoundTo>9273acea-e3fe-407d-a360-520ffd9bd9fd</BoundTo>
+      <DependentUpon>InformacionSiniestro_AP_Uber.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>4431197f-e7f9-496a-b85e-9469c0d5ef11</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_AP_Uber.UserCode.cs">
+      <BoundTo>9273acea-e3fe-407d-a360-520ffd9bd9fd</BoundTo>
+      <DependentUpon>InformacionSiniestro_AP_Uber.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>15a58824-27ee-43b9-b755-fbd83cdbe429</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_Hogar.cs">
+      <BoundTo>22b6b201-39eb-4e33-b365-f46a52c3daa2</BoundTo>
+      <DependentUpon>InformacionSiniestro_Hogar.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c96e8997-6ed7-48c3-a6e9-9de44d8f0584</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_Hogar.UserCode.cs">
+      <BoundTo>22b6b201-39eb-4e33-b365-f46a52c3daa2</BoundTo>
+      <DependentUpon>InformacionSiniestro_Hogar.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d2f12f6a-8e22-494d-a123-e0937376d711</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_Motor.cs">
+      <BoundTo>97bbc857-2715-4d44-acf6-eb049cdd90c1</BoundTo>
+      <DependentUpon>InformacionSiniestro_Motor.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>5adc3a64-24d6-44b8-8c95-aa2b38d25a3f</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_Motor.UserCode.cs">
+      <BoundTo>97bbc857-2715-4d44-acf6-eb049cdd90c1</BoundTo>
+      <DependentUpon>InformacionSiniestro_Motor.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>80180ee2-f68c-4ae2-ab8f-8c42dd5bc065</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_Motor_UBER.cs">
+      <BoundTo>bf93b697-b722-4bf0-b69c-842d36e49e6c</BoundTo>
+      <DependentUpon>InformacionSiniestro_Motor_UBER.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c2436fdf-7796-46c9-afb8-4b2169297b12</id>
+    </Compile>
+    <Compile Include="InformacionSiniestro_Motor_UBER.UserCode.cs">
+      <BoundTo>bf93b697-b722-4bf0-b69c-842d36e49e6c</BoundTo>
+      <DependentUpon>InformacionSiniestro_Motor_UBER.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c841773f-b0f5-4795-9cbe-ee5824e5da45</id>
+    </Compile>
+    <Compile Include="Informacion_Basica_AP.cs">
+      <BoundTo>85e82738-ec05-4a1e-bb53-19f5581ec921</BoundTo>
+      <DependentUpon>Informacion_Basica_AP.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>eca6f241-72e8-4c0c-be7a-a4aed08aece5</id>
+    </Compile>
+    <Compile Include="Informacion_Basica_AP.UserCode.cs">
+      <BoundTo>85e82738-ec05-4a1e-bb53-19f5581ec921</BoundTo>
+      <DependentUpon>Informacion_Basica_AP.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>daf31201-3222-483d-bf89-8ecfdbcb1435</id>
+    </Compile>
+    <Compile Include="Informacion_Basica_Motor_UBER.cs">
+      <BoundTo>d7e186fa-7c9f-4728-b334-7bc358b99a85</BoundTo>
+      <DependentUpon>Informacion_Basica_Motor_UBER.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>00ff885c-73e7-4fd5-a922-7005365a7cd5</id>
+    </Compile>
+    <Compile Include="Informacion_Basica_Motor_UBER.UserCode.cs">
+      <BoundTo>d7e186fa-7c9f-4728-b334-7bc358b99a85</BoundTo>
+      <DependentUpon>Informacion_Basica_Motor_UBER.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>cd6ee55b-9ce6-4940-b2c0-8bc504e0c257</id>
+    </Compile>
+    <Compile Include="Informacion_Siniestro_AP.cs">
+      <BoundTo>d068b6d0-dc8c-46bb-8f64-0b1094898668</BoundTo>
+      <DependentUpon>Informacion_Siniestro_AP.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>ce6586a4-d791-443b-9c9b-d9e00b30a249</id>
+    </Compile>
+    <Compile Include="Informacion_Siniestro_AP.UserCode.cs">
+      <BoundTo>d068b6d0-dc8c-46bb-8f64-0b1094898668</BoundTo>
+      <DependentUpon>Informacion_Siniestro_AP.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>7c0c0c03-9509-442a-be97-5f4414a6f400</id>
+    </Compile>
+    <Compile Include="MenuLateralAcciones.cs">
+      <BoundTo>bde6a587-d231-4342-ac09-aa3876c8db69</BoundTo>
+      <DependentUpon>MenuLateralAcciones.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e224a738-fa2a-4061-b66b-14072abbee0d</id>
+    </Compile>
+    <Compile Include="MenuLateralAcciones.UserCode.cs">
+      <BoundTo>bde6a587-d231-4342-ac09-aa3876c8db69</BoundTo>
+      <DependentUpon>MenuLateralAcciones.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6c76de2a-fc6b-4b36-8b45-01ee3345b612</id>
+    </Compile>
+    <Compile Include="MenuSuperior.cs">
+      <BoundTo>d1d7de96-d002-48a5-a9aa-aa44b1ee7132</BoundTo>
+      <DependentUpon>MenuSuperior.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b8fcee93-bb27-49b4-b98c-bca6ebbd5955</id>
+    </Compile>
+    <Compile Include="MenuSuperior.UserCode.cs">
+      <BoundTo>d1d7de96-d002-48a5-a9aa-aa44b1ee7132</BoundTo>
+      <DependentUpon>MenuSuperior.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>9c12cb9e-179c-463f-868d-b324411f6e50</id>
+    </Compile>
+    <Compile Include="MenuSuperiorBuscaSiniestro.cs">
+      <BoundTo>5576536d-26c4-4274-9cad-a3bb44e70266</BoundTo>
+      <DependentUpon>MenuSuperiorBuscaSiniestro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c190c066-7979-478f-90a2-260eb8a86ea4</id>
+    </Compile>
+    <Compile Include="MenuSuperiorBuscaSiniestro.UserCode.cs">
+      <BoundTo>5576536d-26c4-4274-9cad-a3bb44e70266</BoundTo>
+      <DependentUpon>MenuSuperiorBuscaSiniestro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>cda150bf-4b21-43d4-b614-60e9bbd380fb</id>
+    </Compile>
+    <Compile Include="NuevoSiniestroGuardadoTercero.cs">
+      <BoundTo>fd8a1f4a-77ce-4073-841e-4f9a79e263c8</BoundTo>
+      <DependentUpon>NuevoSiniestroGuardadoTercero.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d121bb98-b3d3-46e6-92c6-8418c0c61cc0</id>
+    </Compile>
+    <Compile Include="NuevoSiniestroGuardadoTercero.UserCode.cs">
+      <BoundTo>fd8a1f4a-77ce-4073-841e-4f9a79e263c8</BoundTo>
+      <DependentUpon>NuevoSiniestroGuardadoTercero.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>57efbafc-ae39-4413-99d6-f78261739bd7</id>
+    </Compile>
+    <Compile Include="OpenBrowser.cs">
+      <BoundTo>306f54a2-7710-403a-a588-ef66f77d372b</BoundTo>
+      <DependentUpon>OpenBrowser.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6a2bde3f-a645-4ec1-987f-1bc3d2d770e9</id>
+    </Compile>
+    <Compile Include="OpenBrowser.UserCode.cs">
+      <BoundTo>306f54a2-7710-403a-a588-ef66f77d372b</BoundTo>
+      <DependentUpon>OpenBrowser.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>bf5a3ba5-f448-4c56-9f3e-1da6ab25bbdb</id>
+    </Compile>
+    <Compile Include="OtrosDanios.cs">
+      <BoundTo>45612097-059d-42fd-98f7-eeacd7204d66</BoundTo>
+      <DependentUpon>OtrosDanios.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8b6e2573-6f42-4b95-9d63-ac06814ade49</id>
+    </Compile>
+    <Compile Include="OtrosDanios.UserCode.cs">
+      <BoundTo>45612097-059d-42fd-98f7-eeacd7204d66</BoundTo>
+      <DependentUpon>OtrosDanios.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>8715eca0-c08f-4a08-a6dc-648730b28ac7</id>
+    </Compile>
+    <Compile Include="Paso1_CodigoRecibo.cs">
+      <BoundTo>f2a561a0-e7a7-48ec-9927-9b3516a361a6</BoundTo>
+      <DependentUpon>Paso1_CodigoRecibo.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>91ca7062-3850-4c01-8d84-ab4d47fc10cf</id>
+    </Compile>
+    <Compile Include="Paso1_CodigoRecibo.UserCode.cs">
+      <BoundTo>f2a561a0-e7a7-48ec-9927-9b3516a361a6</BoundTo>
+      <DependentUpon>Paso1_CodigoRecibo.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>06a8c4f0-58dd-4222-b0cb-c735ddf1d863</id>
+    </Compile>
+    <Compile Include="Paso1_InfoNroCuenta.cs">
+      <BoundTo>41cabd77-6a13-4a17-9d90-d91272237e9a</BoundTo>
+      <DependentUpon>Paso1_InfoNroCuenta.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>dbb6dbe5-7a21-4465-b842-fcc1c6030c5d</id>
+    </Compile>
+    <Compile Include="Paso1_InfoNroCuenta.UserCode.cs">
+      <BoundTo>41cabd77-6a13-4a17-9d90-d91272237e9a</BoundTo>
+      <DependentUpon>Paso1_InfoNroCuenta.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>8c1ccf5a-ed53-4862-bb4a-eecc4cd1b79e</id>
+    </Compile>
+    <Compile Include="Paso1_InformacionBeneficiario.cs">
+      <BoundTo>ac76de31-0b7e-4239-8304-b4a3075b3cf2</BoundTo>
+      <DependentUpon>Paso1_InformacionBeneficiario.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>9dde82da-78b2-4d39-9bb7-7b8d1318bd94</id>
+    </Compile>
+    <Compile Include="Paso1_InformacionBeneficiario.UserCode.cs">
+      <BoundTo>ac76de31-0b7e-4239-8304-b4a3075b3cf2</BoundTo>
+      <DependentUpon>Paso1_InformacionBeneficiario.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c587026d-2057-4e25-ab1a-1c6eaf4b5947</id>
+    </Compile>
+    <Compile Include="Paso1_MetodoDePago_Cheque.cs">
+      <BoundTo>6c115ec9-7dd9-4f5f-afc3-ec4afc0de1dd</BoundTo>
+      <DependentUpon>Paso1_MetodoDePago_Cheque.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c54dc917-fb4c-4eff-8adf-f2f1cf91d8d2</id>
+    </Compile>
+    <Compile Include="Paso1_MetodoDePago_Cheque.UserCode.cs">
+      <BoundTo>6c115ec9-7dd9-4f5f-afc3-ec4afc0de1dd</BoundTo>
+      <DependentUpon>Paso1_MetodoDePago_Cheque.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>b61bff73-8018-43f2-922c-e6836319f0c6</id>
+    </Compile>
+    <Compile Include="Paso1_MetodoDePago_Transferencia.cs">
+      <BoundTo>92f8acb5-2338-4441-8d50-146219d0820b</BoundTo>
+      <DependentUpon>Paso1_MetodoDePago_Transferencia.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a59b84ad-f441-4a26-963e-de673558dd1d</id>
+    </Compile>
+    <Compile Include="Paso1_MetodoDePago_Transferencia.UserCode.cs">
+      <BoundTo>92f8acb5-2338-4441-8d50-146219d0820b</BoundTo>
+      <DependentUpon>Paso1_MetodoDePago_Transferencia.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>fc5c870e-18c2-44fe-9e82-b36688e561bb</id>
+    </Compile>
+    <Compile Include="Paso2_IntroducirInfoPagoSiniestro.cs">
+      <BoundTo>219d9d9b-1d94-4eea-8436-d3dc805f91b1</BoundTo>
+      <DependentUpon>Paso2_IntroducirInfoPagoSiniestro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6c177a11-80f8-452d-bd62-9af9827268c3</id>
+    </Compile>
+    <Compile Include="Paso2_IntroducirInfoPagoSiniestro.UserCode.cs">
+      <BoundTo>219d9d9b-1d94-4eea-8436-d3dc805f91b1</BoundTo>
+      <DependentUpon>Paso2_IntroducirInfoPagoSiniestro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1773fd59-9361-4698-9e80-f74b8cd80405</id>
+    </Compile>
+    <Compile Include="Paso_3_InfoSiniestro_Tercero_Finalizar.cs">
+      <BoundTo>ef68b863-bf3a-449d-a795-73d64a7c6dc8</BoundTo>
+      <DependentUpon>Paso_3_InfoSiniestro_Tercero_Finalizar.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>4cd72181-fab4-4865-91aa-f75895e2a0aa</id>
+    </Compile>
+    <Compile Include="Paso_3_InfoSiniestro_Tercero_Finalizar.UserCode.cs">
+      <BoundTo>ef68b863-bf3a-449d-a795-73d64a7c6dc8</BoundTo>
+      <DependentUpon>Paso_3_InfoSiniestro_Tercero_Finalizar.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>76e38b61-59af-42ff-a28d-4d9bd7d6206b</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>9a55331f-4dd4-4213-8b3d-260f7d00932d</id>
+    </Compile>
+    <Compile Include="Login.cs">
+      <BoundTo>cdc70508-b4a7-483c-99db-9c90deff261a</BoundTo>
+      <DependentUpon>Login.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b3c09918-bd50-456f-91cb-6297316970d6</id>
+    </Compile>
+    <Compile Include="Login.UserCode.cs">
+      <BoundTo>cdc70508-b4a7-483c-99db-9c90deff261a</BoundTo>
+      <DependentUpon>Login.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>246a5350-605d-4257-bdae-db197afd6ed5</id>
+    </Compile>
+    <Compile Include="Detalle_VehiculoAsegurado_Ocupantes.cs">
+      <BoundTo>ab998d1b-ed95-4902-b6a4-fb58c2373208</BoundTo>
+      <DependentUpon>Detalle_VehiculoAsegurado_Ocupantes.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0953d9ea-dfa5-44dc-a55d-ecca8b04cfc6</id>
+    </Compile>
+    <Compile Include="Detalle_VehiculoAsegurado_Ocupantes.UserCode.cs">
+      <BoundTo>ab998d1b-ed95-4902-b6a4-fb58c2373208</BoundTo>
+      <DependentUpon>Detalle_VehiculoAsegurado_Ocupantes.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a73f5b88-4b81-44b9-ac88-274749abd63a</id>
+    </Compile>
+    <Compile Include="FinalizarSiniestro.cs">
+      <BoundTo>b1b22e67-655c-4948-8c4d-f2a1d53032cd</BoundTo>
+      <DependentUpon>FinalizarSiniestro.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>fb6c49c0-8081-4e88-beb5-d7f60fea9bda</id>
+    </Compile>
+    <Compile Include="FinalizarSiniestro.UserCode.cs">
+      <BoundTo>b1b22e67-655c-4948-8c4d-f2a1d53032cd</BoundTo>
+      <DependentUpon>FinalizarSiniestro.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>225a5438-a059-4bd2-9522-cce6f50adca7</id>
+    </Compile>
+    <Compile Include="Reclamos.cs">
+      <BoundTo>a3ace1a5-1b29-4682-a38e-809a74e453b4</BoundTo>
+      <DependentUpon>Reclamos.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8d99d70f-bc24-43d2-b1ea-4c02581feaa9</id>
+    </Compile>
+    <Compile Include="Reclamos.UserCode.cs">
+      <BoundTo>a3ace1a5-1b29-4682-a38e-809a74e453b4</BoundTo>
+      <DependentUpon>Reclamos.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>c67f8db5-0721-4fcb-a379-6bb3d26c6664</id>
+    </Compile>
+    <Compile Include="Reclamos_AP.cs">
+      <BoundTo>1162d4e5-c9a6-4969-85b0-9021aad92123</BoundTo>
+      <DependentUpon>Reclamos_AP.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>58842a11-fa15-4056-9123-242c79e6f66e</id>
+    </Compile>
+    <Compile Include="Reclamos_AP.UserCode.cs">
+      <BoundTo>1162d4e5-c9a6-4969-85b0-9021aad92123</BoundTo>
+      <DependentUpon>Reclamos_AP.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e7141880-14b2-4cb6-8cee-1d240b85a680</id>
+    </Compile>
+    <Compile Include="Reclamos_Hogar.cs">
+      <BoundTo>7a398537-e7b1-485a-b6fa-30bb6a9fc2e2</BoundTo>
+      <DependentUpon>Reclamos_Hogar.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>3957070d-de7f-45e3-8619-6e0ee166ec41</id>
+    </Compile>
+    <Compile Include="Reclamos_Hogar.UserCode.cs">
+      <BoundTo>7a398537-e7b1-485a-b6fa-30bb6a9fc2e2</BoundTo>
+      <DependentUpon>Reclamos_Hogar.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>342ed399-ef53-461d-8869-f0883cf1bb43</id>
+    </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>c670d90b-af4c-4201-b8f0-08de3cb6a275</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6fe69de5-4c96-44ca-b0d2-4fb9b88e09a8</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>c670d90b-af4c-4201-b8f0-08de3cb6a275</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d0a7aa6b-5c10-44ac-b5b7-057d1e159f60</id>
+    </Compile>
+    <Compile Include="Repository1.cs">
+      <BoundTo>3BAC7322-B46C-472D-A26B-AB931365D9E8</BoundTo>
+      <DependentUpon>Repository1.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>a3fb18ae-d933-4257-b92f-fdf4ad3dba44</id>
+    </Compile>
+    <Compile Include="RestoDatosFastTrack.cs">
+      <BoundTo>3bce1d88-3610-456b-be88-4d793a491833</BoundTo>
+      <DependentUpon>RestoDatosFastTrack.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c59d642f-0d65-4dde-8afd-cadfa841e8c3</id>
+    </Compile>
+    <Compile Include="RestoDatosFastTrack.UserCode.cs">
+      <BoundTo>3bce1d88-3610-456b-be88-4d793a491833</BoundTo>
+      <DependentUpon>RestoDatosFastTrack.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>fb1e0a4c-8170-4a75-a353-4b6ce09e2207</id>
+    </Compile>
+    <Compile Include="SeleccionarPersonas.cs">
+      <BoundTo>3857a6e4-2091-4cbc-9be5-399029e642ef</BoundTo>
+      <DependentUpon>SeleccionarPersonas.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e249eef4-12cc-440d-976d-e9db61481c55</id>
+    </Compile>
+    <Compile Include="SeleccionarPersonas.UserCode.cs">
+      <BoundTo>3857a6e4-2091-4cbc-9be5-399029e642ef</BoundTo>
+      <DependentUpon>SeleccionarPersonas.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>f46aa10f-8dc6-480f-ae6b-1b0b62e71ee3</id>
+    </Compile>
+    <Compile Include="Sura___ClaimsRepository.cs">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <DependentUpon>Sura___ClaimsRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>4f02b690-686d-42be-b176-92e094dea0cc</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AgregarDanosLesionesTerceros.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>1ada8859-c195-4cf0-b0db-8ff20468cdb2</id>
+      <recordtableid>c46639e2-c589-4fe1-9cd6-5d3cb864425f</recordtableid>
+    </None>
+    <None Include="AgregarDatosLesionesTercerosUBER.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>2dabbec9-5cc9-4232-af2d-175402ee1951</id>
+      <recordtableid>a5d72a21-2057-4e05-88e0-f9274c9fdf00</recordtableid>
+    </None>
+    <None Include="app.config">
+      <id>506be799-ec60-49c7-aacd-984a4afb5a8c</id>
+    </None>
+    <None Include="BuscarPoliza.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>c1658188-dacd-4e8c-af80-444deca3296f</id>
+      <recordtableid>38258b08-286d-4664-bec3-c4e3113099ec</recordtableid>
+    </None>
+    <None Include="Cerradura.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>f7c8348e-7774-45d6-bd46-4ca09d979282</id>
+      <recordtableid>8bf5c646-0d94-488f-8470-f2b0c1685855</recordtableid>
+    </None>
+    <None Include="CloseBrowser.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>1298aa89-fe5f-4c8c-9a44-26ad8f8b4d4f</id>
+      <recordtableid>112ab607-6c76-477f-8875-aa123958ee4d</recordtableid>
+    </None>
+    <None Include="DatosFastTrack.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>27ba3745-9e2d-4f56-802c-e5df4b9d930f</id>
+      <recordtableid>de0ebdb9-7220-417c-98ca-e9196ac84a41</recordtableid>
+    </None>
+    <None Include="DatosProveedor.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>c001b303-d5a9-4845-a018-0ee828b921d7</id>
+      <recordtableid>0c68c95a-7fde-429f-9262-49cbee29fa7d</recordtableid>
+    </None>
+    <None Include="Datos_UBER_Motor.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>761c6b8e-f3b1-4488-a045-ce7341a819d9</id>
+      <recordtableid>0883efed-5eb3-452c-9349-245b9801f2b4</recordtableid>
+    </None>
+    <None Include="DescripcionDelTipoDelSiniestro.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>34fbe9dd-ac5a-48c0-ab23-990c3bf07ccd</id>
+      <recordtableid>c7b13d5f-db3a-4ea8-9a19-f28249850496</recordtableid>
+    </None>
+    <None Include="DescripTipoSiniestro_Tercero.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>3f43b4cb-f93d-460a-9a5e-9d7e25aaa82d</id>
+      <recordtableid>c383d4cf-bbb7-4c6d-a0e4-1a7d4a3b26ce</recordtableid>
+    </None>
+    <None Include="DetalleVehiculoAsegurado_Tercero.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>d7ffd5e6-b55b-43ec-8b07-04628ee425dd</id>
+      <recordtableid>192fb905-0962-4719-9e0e-4f7647e69e3e</recordtableid>
+    </None>
+    <None Include="DetalleVehiculoAsegurado_Tercero_UBER.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>e3d7400e-5894-4f46-b399-ca962c50fdcd</id>
+      <recordtableid>5597f57b-71d6-476c-8d28-7ad794b743f2</recordtableid>
+    </None>
+    <None Include="FinalizaPagoSiniestro.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>afb84d64-054e-4001-9e86-728758db2aae</id>
+      <recordtableid>cc1dec83-de57-4474-b917-e642cb666b0a</recordtableid>
+    </None>
+    <None Include="FinalizarSiniestroUBER.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>69b853d2-d645-4968-8f1a-31bc91882377</id>
+      <recordtableid>3388a850-5b0b-4add-8e0d-73e0a4e1c1a4</recordtableid>
+    </None>
+    <None Include="InformacionBasica_AP_Uber.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>da35dea5-ddb5-4895-b967-af36c8af8bdc</id>
+      <recordtableid>fabdbd2c-8385-4b71-b227-0923a8fd2afb</recordtableid>
+    </None>
+    <None Include="InformacionBasica_Hogar.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>9bfcc045-81ae-4517-8a70-cb0d6e432a03</id>
+      <recordtableid>d34ec441-d824-468e-aee0-707f7326ded6</recordtableid>
+    </None>
+    <None Include="InformacionBasica_Motor.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>844c4a0a-32b1-4747-94d1-d5c92f9884a7</id>
+      <recordtableid>5ad48d85-57b0-45f7-bcd6-24e52f64b383</recordtableid>
+    </None>
+    <None Include="InformacionSiniestro_AP_Uber.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>9273acea-e3fe-407d-a360-520ffd9bd9fd</id>
+      <recordtableid>0e396338-1a6a-4d9c-91b3-24473002d3d1</recordtableid>
+    </None>
+    <None Include="InformacionSiniestro_Hogar.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>22b6b201-39eb-4e33-b365-f46a52c3daa2</id>
+      <recordtableid>13bd9ab2-edb1-4ea2-b396-7011d852c373</recordtableid>
+    </None>
+    <None Include="InformacionSiniestro_Motor.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>97bbc857-2715-4d44-acf6-eb049cdd90c1</id>
+      <recordtableid>dfbec64a-a639-4303-ba73-4fd6b33a20a9</recordtableid>
+    </None>
+    <None Include="InformacionSiniestro_Motor_UBER.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>bf93b697-b722-4bf0-b69c-842d36e49e6c</id>
+      <recordtableid>76e499ed-cea5-4526-b393-21729e875303</recordtableid>
+    </None>
+    <None Include="Informacion_Basica_AP.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>85e82738-ec05-4a1e-bb53-19f5581ec921</id>
+      <recordtableid>b9ff2006-48fb-4fa7-874b-b6b7f5e099dd</recordtableid>
+    </None>
+    <None Include="Informacion_Basica_Motor_UBER.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>d7e186fa-7c9f-4728-b334-7bc358b99a85</id>
+      <recordtableid>28ceccf6-a017-4894-8a69-0d2ff8008979</recordtableid>
+    </None>
+    <None Include="Informacion_Siniestro_AP.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>d068b6d0-dc8c-46bb-8f64-0b1094898668</id>
+      <recordtableid>222ed32d-62ee-4d02-9d02-e29d5bc2a0b4</recordtableid>
+    </None>
+    <None Include="MenuLateralAcciones.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>bde6a587-d231-4342-ac09-aa3876c8db69</id>
+      <recordtableid>416caf03-94a1-4ab1-85b7-823899b0d1ec</recordtableid>
+    </None>
+    <None Include="MenuSuperior.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>d1d7de96-d002-48a5-a9aa-aa44b1ee7132</id>
+      <recordtableid>ad07880f-1764-4aab-a1c6-6e45d1462228</recordtableid>
+    </None>
+    <None Include="MenuSuperiorBuscaSiniestro.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>5576536d-26c4-4274-9cad-a3bb44e70266</id>
+      <recordtableid>9db988f3-61c3-4054-b4eb-274cbcec5866</recordtableid>
+    </None>
+    <None Include="NuevoSiniestroGuardadoTercero.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>fd8a1f4a-77ce-4073-841e-4f9a79e263c8</id>
+      <recordtableid>0e139cf1-b396-4a51-b397-f074aa166e6b</recordtableid>
+    </None>
+    <None Include="OpenBrowser.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>306f54a2-7710-403a-a588-ef66f77d372b</id>
+      <recordtableid>d2e4c9c5-a4b2-4f60-a158-a09b3f32ecd2</recordtableid>
+    </None>
+    <None Include="Login.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>cdc70508-b4a7-483c-99db-9c90deff261a</id>
+      <recordtableid>075d25ad-50fb-4cc7-a13e-63a4c1134019</recordtableid>
+    </None>
+    <None Include="Detalle_VehiculoAsegurado_Ocupantes.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>ab998d1b-ed95-4902-b6a4-fb58c2373208</id>
+      <recordtableid>d16a476d-53f8-4662-9729-96eeec5a7393</recordtableid>
+    </None>
+    <None Include="FinalizarSiniestro.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>b1b22e67-655c-4948-8c4d-f2a1d53032cd</id>
+      <recordtableid>cd457d00-1a93-4026-b553-306383dbf37a</recordtableid>
+    </None>
+    <None Include="OtrosDanios.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>45612097-059d-42fd-98f7-eeacd7204d66</id>
+      <recordtableid>85e4b6ca-b0b5-4152-8f35-9fb1aeaf6585</recordtableid>
+    </None>
+    <None Include="Paso1_CodigoRecibo.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>f2a561a0-e7a7-48ec-9927-9b3516a361a6</id>
+      <recordtableid>0e4ec0e0-3129-4128-81b6-ed26bb08a67c</recordtableid>
+    </None>
+    <None Include="Paso1_InfoNroCuenta.rxrec">
+      <id>41cabd77-6a13-4a17-9d90-d91272237e9a</id>
+      <recordtableid>f672219b-d599-4541-9ac0-f0448e0ff470</recordtableid>
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+    </None>
+    <None Include="Paso1_InformacionBeneficiario.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>ac76de31-0b7e-4239-8304-b4a3075b3cf2</id>
+      <recordtableid>07be9729-c44a-46a4-b128-44f194597592</recordtableid>
+    </None>
+    <None Include="Paso1_MetodoDePago_Cheque.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>6c115ec9-7dd9-4f5f-afc3-ec4afc0de1dd</id>
+      <recordtableid>755e8086-90bc-4ebe-801e-8d5189f57b80</recordtableid>
+    </None>
+    <None Include="Paso1_MetodoDePago_Transferencia.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>92f8acb5-2338-4441-8d50-146219d0820b</id>
+      <recordtableid>6525b5eb-d8eb-4a28-b2e5-034c66820fa9</recordtableid>
+    </None>
+    <None Include="Paso2_IntroducirInfoPagoSiniestro.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>219d9d9b-1d94-4eea-8436-d3dc805f91b1</id>
+      <recordtableid>eff42eb8-e2ed-421a-8ebf-274464b2758a</recordtableid>
+    </None>
+    <None Include="Paso_3_InfoSiniestro_Tercero_Finalizar.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>ef68b863-bf3a-449d-a795-73d64a7c6dc8</id>
+      <recordtableid>83cde486-4010-473a-b7fe-beec9f856bed</recordtableid>
+    </None>
+    <None Include="Reclamos.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>a3ace1a5-1b29-4682-a38e-809a74e453b4</id>
+      <recordtableid>7eb63bc4-055a-448b-b6dd-cc9e0ed47619</recordtableid>
+    </None>
+    <None Include="Reclamos_AP.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>1162d4e5-c9a6-4969-85b0-9021aad92123</id>
+      <recordtableid>9f171b9e-3557-46d4-b9e6-d02085e54945</recordtableid>
+    </None>
+    <None Include="Reclamos_Hogar.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>7a398537-e7b1-485a-b6fa-30bb6a9fc2e2</id>
+      <recordtableid>df3ca1f2-3350-441d-a2b1-7ac79815008b</recordtableid>
+    </None>
+    <None Include="Recording1.rxrec">
+      <id>c670d90b-af4c-4201-b8f0-08de3cb6a275</id>
+      <recordtableid>7a5ecac6-d684-4b98-9bac-5887c98e6102</recordtableid>
+      <BoundTo>3BAC7322-B46C-472D-A26B-AB931365D9E8</BoundTo>
+    </None>
+    <None Include="Repository1.rximg">
+      <BoundTo>3BAC7322-B46C-472D-A26B-AB931365D9E8</BoundTo>
+      <DependentUpon>Repository1.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>136c93a1-17e3-44cf-b85b-d8df378a0629</id>
+    </None>
+    <None Include="Repository1.rxrep">
+      <id>3BAC7322-B46C-472D-A26B-AB931365D9E8</id>
+      <repoid>495f970a-c553-4c59-be93-edf84325fa1e</repoid>
+      <reporootid>45cbbaf1-ef30-4c20-8e27-a9976826e1f8</reporootid>
+    </None>
+    <None Include="RestoDatosFastTrack.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>3bce1d88-3610-456b-be88-4d793a491833</id>
+      <recordtableid>dcfe95b0-3159-4fb5-9eb4-e5b451405df4</recordtableid>
+    </None>
+    <None Include="SeleccionarPersonas.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>3857a6e4-2091-4cbc-9be5-399029e642ef</id>
+      <recordtableid>bffa70da-3779-4182-8047-78c7304e55e0</recordtableid>
+    </None>
+    <None Include="Sura___ClaimsRepository.rximg">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <DependentUpon>Sura___ClaimsRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>d534aa16-5f6b-4967-8d7d-10a62d861a79</id>
+    </None>
+    <None Include="Sura___ClaimsRepository.rxrep">
+      <id>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</id>
+      <repoid>89de42cf-da5b-44d4-a541-72de9b37ec4c</repoid>
+      <reporootid>e236aa5f-717e-474a-818d-ab73ab951257</reporootid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sura___Claims.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>b5d33534-d2bc-42ae-9f5d-8a3aeea4a9b8</id>
+    </Content>
+    <Content Include="Sura___Claims.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>187ae3eb-29af-4d10-841e-9ad531658f7c</id>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

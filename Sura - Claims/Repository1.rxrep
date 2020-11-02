@@ -1,0 +1,67 @@
+﻿<repository
+id="495f970a-c553-4c59-be93-edf84325fa1e"
+name="Repository1">
+	<codegen
+	classname="Repository1"
+	namespace="Sura___Claims">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="45cbbaf1-ef30-4c20-8e27-a9976826e1f8"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="d0681cf0-6515-40c9-a9e6-1065890b9646"
+		isrooted="True"
+		name="GuidewireClaimCenter"
+		refpath="/dom[@domain='i-preproducciongestion.segurossura.com.ar']"
+		searchtimeout="30000ms"
+		usecache="False">
+			<item
+			addcaps="unknown,webelement,divtag"
+			capname="divtag"
+			id="eb6045bf-052f-4221-8222-b7912c445c0d"
+			name="XFormArrowTriggerXFormArrowTrigge"
+			refimgid="bfddeb52-3586-4401-957c-71a341ba5948"
+			refpath="/dom[@domain='i-preproducciongestion.segurossura.com.ar']//tbody[#'centerPanel-tbody']/tr/td/div/table/tbody/tr[5]/td/div/div[2]/div/table/tbody/tr/td/div/table/tbody/tr/td/div/table/tbody/tr/td[1]/div/table/tbody/tr[9]/td/div/div/div/div[2]"
+			searchtimeout="30000ms">
+				/dom[@domain='i-preproducciongestion.segurossura.com.ar']//tbody[#'centerPanel-tbody']/tr//table/tbody/tr[5]/td/div/div[2]/?/?/table//div/table//div/table/?/?/tr/td[1]/?/?/table/tbody/tr[9]/td/div/div/div/div[2]
+			</item>
+			<item
+			addcaps="unknown,webelement,litag"
+			capname="litag"
+			id="bc13fea0-d392-49d0-9f0c-c3d84edc4082"
+			name="GALICIA"
+			refimgid="a831edf8-a293-4aa2-9e3c-77109e06bd18"
+			searchtimeout="30000ms">
+				/dom[@domain='i-preproducciongestion.segurossura.com.ar']/body/div[@id~'boundlist-']//ul/li[@id~'ext-element-' and @innertext~'[A-Z]+']
+			</item>
+			<basepath>
+				/dom[@domain='i-preproducciongestion.segurossura.com.ar']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
+dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
+yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
+9/vEbaWh7TO1xi4qmjspfWKhuLqN++VGtLqn5BTVk1lQRbRVHGn4X8nTNclYtD020smBYDjaHhsJ
+cIxPbY8YIr+9viEGgqGwDBxLvixXfGJaLCLdedUfCwRDyPDKWoiF5SAuT0AMSA+2BXhXZqmydFBu
+bkfbmkFpayPOyQW8CwHs7jUxIN1NOkEa1llLGA7bsYX7KbTd4GiuiUuVbxhyzTMwuiwGpFX5lkLU
+dFjJ+55Mw5yGGpsRtX6Kk2Ue9jWewtBRx9eRJTEg7XnWF+TBo25SzUmo3inINLjIKoPD1QXsbNvN
+6fxr9Az5xIDm9kOm5gLce+xEW/aF1BYlCmshSr2PMxm32HV3B8ez0/jQPycG1NklTMxsUGUaQaMD
+lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
+zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
+8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
+F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>

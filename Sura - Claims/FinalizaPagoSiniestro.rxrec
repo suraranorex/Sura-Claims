@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="cc1dec83-de57-4474-b917-e642cb666b0a"
+mode="Global">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="FinalizaPagoSiniestro"
+	namespace="Sura___Claims">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<WaitForRecordItem
+		enabled="True"
+		optional="False"
+		searchpropertyid="8ca2341d-9bb0-4533-9f8d-c37e51c6c57a"
+		waitaction="Exists"
+		waittimeout="30000ms">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="605d3ed0-6204-4ca8-b0d7-169545ac4454"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'ClaimFinancialsChecks-tbody']//span[@innertext&gt;'Datos financieros (Total incurrido:']
+				</path>
+			</info>
+		</WaitForRecordItem>
+	</recorditems>
+	<repository
+	id="89de42cf-da5b-44d4-a541-72de9b37ec4c"
+	name="Sura___ClaimsRepository"
+	relativepath="Sura___ClaimsRepository.rxrep">
+		<codegen
+		classname="Sura___ClaimsRepository"
+		namespace="Sura___Claims">
+		</codegen>
+		<rootfolder
+		id="e236aa5f-717e-474a-818d-ab73ab951257"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		FinalizaPagoSiniestro.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
