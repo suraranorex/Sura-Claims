@@ -3024,26 +3024,38 @@
 		</DataSource>
 	</datasources>
 	<testconfigurations
-	default="TestRun">
+	default="GeneracionSiniestroHogar">
 		<testconfiguration
-		name="TestRun">
-			<testcontainer
-			id="0753c1b8-83b6-430a-a54a-bd5154d892a6">
-			</testcontainer>
+		name="GeneracionSiniestroAP">
 			<testcontainer
 			id="08d133ba-f352-447a-aabd-6d072e856c87">
+			</testcontainer>
+			<testcontainer
+			id="99ea05b4-3e7c-4197-93cf-555c970dfc7f">
+			</testcontainer>
+			<testcontainer
+			id="fe2329e0-5c73-4eab-b9c9-f81bd0b892ad">
+			</testcontainer>
+		</testconfiguration>
+		<testconfiguration
+		name="GeneracionSiniestroHogar">
+			<testcontainer
+			id="23fa8d54-bb74-4189-911d-bad3a860738c">
+			</testcontainer>
+			<testcontainer
+			id="fe2329e0-5c73-4eab-b9c9-f81bd0b892ad">
+			</testcontainer>
+		</testconfiguration>
+		<testconfiguration
+		name="GeneraSiniestroMotor">
+			<testcontainer
+			id="0753c1b8-83b6-430a-a54a-bd5154d892a6">
 			</testcontainer>
 			<testcontainer
 			id="08e84ed0-1268-4565-877f-3ad436c1e72f">
 			</testcontainer>
 			<testcontainer
-			id="0dc2c8b8-9a8f-4d2f-a3a4-d77f5f2d550c">
-			</testcontainer>
-			<testcontainer
 			id="19e59fcd-dff4-4f77-9996-8880df46a127">
-			</testcontainer>
-			<testcontainer
-			id="23fa8d54-bb74-4189-911d-bad3a860738c">
 			</testcontainer>
 			<testcontainer
 			id="2e97eb42-d9c2-4ed8-ae7f-70a209f6da1a">
@@ -3052,10 +3064,16 @@
 			id="4b1991d7-1849-4e8d-b7e0-364834fd2a4d">
 			</testcontainer>
 			<testcontainer
-			id="99ea05b4-3e7c-4197-93cf-555c970dfc7f">
+			id="a7320e16-38df-43e8-8517-ec5f8018e763">
 			</testcontainer>
 			<testcontainer
-			id="a7320e16-38df-43e8-8517-ec5f8018e763">
+			id="fe2329e0-5c73-4eab-b9c9-f81bd0b892ad">
+			</testcontainer>
+		</testconfiguration>
+		<testconfiguration
+		name="PagoSiniestros">
+			<testcontainer
+			id="0dc2c8b8-9a8f-4d2f-a3a4-d77f5f2d550c">
 			</testcontainer>
 			<testcontainer
 			id="abd61f4e-1e1a-4abd-8db9-b318a1ea7fd1">
