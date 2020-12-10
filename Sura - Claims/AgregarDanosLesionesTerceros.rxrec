@@ -828,7 +828,7 @@ JAMblDY+tOqK0/484P8Armv8qlrnZ2rYKKKKQwooooA//9k=
 		</mouseitem>
 		<explicitdelayitem
 		duration="3000ms"
-		enabled="True"
+		enabled="False"
 		optional="False">
 			<comment>
 			</comment>
@@ -1049,6 +1049,48 @@ I+6fWrOnyNLAzN/ewBnp+dFFAFqiiigAooooAKKKKACiiigAooooAKKKKAI7gkQuQcEKaqSRrCwR
 M7W25BYnow9frRRQBE8pGqiHAKtznJ44/Km2knmb1IHySKoOScgH3oooQMnZzG6Yx80jKc+lJH/q
 f+BR/wDstFFCDqNtJGkvXDHO0MOp9RV+iigAooopAFFFFABRRRQAUUUUAf/Z
 			</helperscreenshot>
+		</mouseitem>
+		<WaitForRecordItem
+		enabled="True"
+		optional="False"
+		searchpropertyid="8e200b61-7630-445c-b462-625a73967c50"
+		waitaction="NotExists"
+		waittimeout="30000ms">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="35d0c653-8290-4700-b5ce-d31c94df4895"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//div[@innertext='D.N.I.']/../..//div[@class='x-grid-cell-inner ' and @data-tabindexsaved='True'][2]
+				</path>
+			</info>
+		</WaitForRecordItem>
+		<mouseitem
+		action="Move"
+		button="Left"
+		duration="300ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="d8a14081-a5e6-4910-858f-412e2821dee4"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="05b7c423-c3bb-46ea-9911-b4177fbe7f1a"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//div[@innertext='D.N.I.']/../..//div[@class='x-grid-cell-inner '][2]
+				</path>
+			</info>
 		</mouseitem>
 		<mouseitem
 		action="Click"
@@ -4480,24 +4522,6 @@ WT/eqemIpE7o2WGVjHuQK4bdznnnv2pwlZnwxKlXVWGeO/6VbooAqwsxLhmJG0+Xk9V9fr/9b1qa
 nv8Acb6U2gBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigD/2Q==
 			</helperscreenshot>
 		</keysequenceitem>
-		<WaitForRecordItem
-		enabled="True"
-		optional="False"
-		searchpropertyid="f46c234a-e209-4a46-9a92-a0938fd0b939"
-		waitaction="NotExists"
-		waittimeout="30000ms">
-			<comment>
-			</comment>
-			<bindings>
-			</bindings>
-			<info
-			id="33caa373-22cc-4ae2-a8f0-f5863227bc16"
-			sourcename="RepositoryEditor">
-				<path>
-					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']/tr//table/tbody/tr[4]/td/div/div[2]/div/table//div/table/?/?/tr/td[2]/?/?/table/tbody/tr[6]/td/div/div/div/div[1]/input[@name='FNOLVehicleIncidentPopup:FNOLVehicleIncidentScreen:Vehicle_Model' and @data-tabindexsaved='True']
-				</path>
-			</info>
-		</WaitForRecordItem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -4522,6 +4546,24 @@ nv8Acb6U2gBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigBKKWigD/2Q==
 				</path>
 			</info>
 		</mouseitem>
+		<WaitForRecordItem
+		enabled="True"
+		optional="False"
+		searchpropertyid="76b083ba-38d6-4613-aa3e-542499295091"
+		waitaction="NotExists"
+		waittimeout="30000ms">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="81bc0f31-f8b9-4404-9b0a-0cd49eb0ad09"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//input[@name='FNOLVehicleIncidentPopup:FNOLVehicleIncidentScreen:Vehicle_Style' and @data-tabindexsaved='True']
+				</path>
+			</info>
+		</WaitForRecordItem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -5100,6 +5142,48 @@ igCG7VntyEUswZTgEc4IPeql3DJcujvDME2kbB5ZIPrzkfiDmtGigD//2Q==
 				</path>
 			</info>
 		</keysequenceitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="300ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="c3192780-33e2-4840-840b-d0ee5bc19912"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="213ed408-d8a3-461c-915e-dbb03610e484"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//table/tbody/tr[4]/td/div/div[2]/?/?/table//div/table/?/?/tr/td[2]/div/table/tbody/tr[1]/?/?/label[@innertext&gt;'Elementos b&#225;sicos del veh']
+				</path>
+			</info>
+		</mouseitem>
+		<WaitForRecordItem
+		enabled="True"
+		optional="False"
+		searchpropertyid="4773f238-8e45-47b0-81ec-af385b7ebe33"
+		waitaction="NotExists"
+		waittimeout="30000ms">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="f4d10379-5e5b-41b4-95dc-1575a0d99f7e"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//input[@name='FNOLVehicleIncidentPopup:FNOLVehicleIncidentScreen:Vehicle_LicensePlate' and @data-tabindexsaved='True']
+				</path>
+			</info>
+		</WaitForRecordItem>
 		<mouseitem
 		action="Click"
 		button="Left"
@@ -6096,7 +6180,7 @@ SoJH6itKgBuw/wB9v0/wo2H++36f4U6igBuw/wB9v0/wo2H++36f4U6igBuw/wB9v0/wop1FAH//
 		optional="False"
 		searchpropertyid="aebaf1c4-191b-4d03-80ee-6a7e88a4542b"
 		waitaction="Exists"
-		waittimeout="5000ms">
+		waittimeout="30000ms">
 			<comment>
 			</comment>
 			<bindings>

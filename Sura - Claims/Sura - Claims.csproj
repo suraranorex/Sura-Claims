@@ -428,6 +428,18 @@
       <UserCode>true</UserCode>
       <id>7c0c0c03-9509-442a-be97-5f4414a6f400</id>
     </Compile>
+    <Compile Include="Logout.cs">
+      <BoundTo>2eae8929-0b91-4df3-9fcc-7a0e145ae16f</BoundTo>
+      <DependentUpon>Logout.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>23dea215-bc8f-4677-a5e1-a47c8ff3b051</id>
+    </Compile>
+    <Compile Include="Logout.UserCode.cs">
+      <BoundTo>2eae8929-0b91-4df3-9fcc-7a0e145ae16f</BoundTo>
+      <DependentUpon>Logout.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>6c3bd50a-e677-47f4-9d53-aca225cba074</id>
+    </Compile>
     <Compile Include="MenuLateralAcciones.cs">
       <BoundTo>bde6a587-d231-4342-ac09-aa3876c8db69</BoundTo>
       <DependentUpon>MenuLateralAcciones.rxrec</DependentUpon>
@@ -831,6 +843,11 @@
       <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
       <id>d068b6d0-dc8c-46bb-8f64-0b1094898668</id>
       <recordtableid>222ed32d-62ee-4d02-9d02-e29d5bc2a0b4</recordtableid>
+    </None>
+    <None Include="Logout.rxrec">
+      <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>
+      <id>2eae8929-0b91-4df3-9fcc-7a0e145ae16f</id>
+      <recordtableid>1299804c-f9f8-4e4c-b03e-8b83c4ff567d</recordtableid>
     </None>
     <None Include="MenuLateralAcciones.rxrec">
       <BoundTo>b2b2dd91-2d26-4841-842c-9fc1b86ffff0</BoundTo>

@@ -84,20 +84,54 @@ mode="Global">
 				</path>
 			</info>
 		</mouseitem>
-		<keysequenceitem
-		KeySequence="Ingreso el detalle del siniestro ocurrido"
-		duration="20ms"
+		<explicitdelayitem
+		duration="2000ms"
 		enabled="True"
-		optional="False"
-		presstime="20ms"
-		searchpropertyid="a413fd62-6a1f-48b5-8fbf-4d32fd2334ca">
+		optional="False">
 			<comment>
 			</comment>
 			<bindings>
-				<binding
-				target="KeySequence"
-				variable="DetalleSiniestro">
-				</binding>
+			</bindings>
+		</explicitdelayitem>
+		<mouseitem
+		action="Move"
+		button="Left"
+		duration="300ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="ed0fbcc9-fb30-475a-ae88-87019f67463f"
+		sx="0"
+		sy="0"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="4c8adb8d-c1d8-4274-a6bb-a84fc8e175d1"
+			sourcename="RepositoryEditor">
+				<path>
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//span[@innertext~'Detalle del siniestro']/../..//textarea
+				</path>
+			</info>
+		</mouseitem>
+		<mouseitem
+		action="Click"
+		button="Left"
+		duration="300ms"
+		enabled="True"
+		loc="Center"
+		movetime="300ms"
+		optional="False"
+		searchpropertyid="e74eb7d3-ac3c-4e86-b970-0acd8559f276"
+		sx="489"
+		sy="295"
+		warnoutofbounds="False">
+			<comment>
+			</comment>
+			<bindings>
 			</bindings>
 			<info
 			id="4c8adb8d-c1d8-4274-a6bb-a84fc8e175d1"
@@ -110,7 +144,7 @@ mode="Global">
 				hasfocus="False"
 				index="0"
 				prefcap="textareatag"
-				rect="299,209,212,43"
+				rect="375,267,228,56"
 				role="unknown"
 				snapElem=""
 				valid="True"
@@ -138,6 +172,7 @@ mode="Global">
 					<attribute
 					name="innertext"
 					type="System.String">
+						Da&#241;o Tercero
 					</attribute>
 					<attribute
 					name="safeclass"
@@ -148,6 +183,11 @@ mode="Global">
 					name="tagname"
 					type="System.String">
 						textarea
+					</attribute>
+					<attribute
+					name="tagvalue"
+					type="System.String">
+						Da&#241;o Tercero
 					</attribute>
 					<attribute
 					name="autofocus"
@@ -205,10 +245,39 @@ mode="Global">
 					</dynamicattribute>
 				</element>
 				<path>
-					/dom[@domain='ssurgwsoadev4.opc.oracleoutsourcing.com']//tbody[#'centerPanel-tbody']//span[@innertext~'Detalle del siniestro']/../..//textarea
+					/dom[@domain=$Ambiente]//tbody[#'centerPanel-tbody']//span[@innertext~'Detalle del siniestro']/../..//textarea
 				</path>
 			</info>
+		</mouseitem>
+		<keysequenceitem
+		KeySequence="Ingreso el detalle del siniestro ocurrido"
+		duration="20ms"
+		enabled="True"
+		optional="False"
+		presstime="20ms"
+		searchpropertyid="a413fd62-6a1f-48b5-8fbf-4d32fd2334ca">
+			<comment>
+			</comment>
+			<bindings>
+				<binding
+				target="KeySequence"
+				variable="DetalleSiniestro">
+				</binding>
+			</bindings>
 		</keysequenceitem>
+		<loggingrecorditem
+		action="Screenshot"
+		category="User"
+		enabled="True"
+		message=""
+		optional="False"
+		reportlevel="Info;20"
+		searchpropertyid="feced3d8-7721-48fb-ae82-79842858c261">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+		</loggingrecorditem>
 		<mouseitem
 		action="Click"
 		button="Left"
